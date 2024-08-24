@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scripts.fetch_data import DataFolderProcessor
+import gdown
 
 # Function to get the absolute path of the data folder
 def get_data_folder_path():
@@ -34,28 +34,31 @@ def analyze_solar_irradiance_patterns():
     st.title("Analyze Solar Irradiance Patterns")
 
     # Specify file paths for the three regions directly
-    processor = DataFolderProcessor()
-    csv_files = processor.csv_files
-    # Specify file paths for the three regions directly
     file_paths = {
-        "Benin-Malanville": os.path.join(processor.data_folder_path, "cleaned_cleaned_benin-malanville.csv"),
-        "Sierra Leone-Bumbuna": os.path.join(processor.data_folder_path, "cleaned_cleaned_sierraleone-bumbuna.csv"),
-        "Togo-Dapaong_QC": os.path.join(processor.data_folder_path, "cleaned_cleaned_togo-dapaong_qc.csv")
+        "Benin-Malanville": "https://drive.google.com/uc?export=download&id=17iGCuwUFAVBt1imW6btaBQ1LiFgavX7U",
+        "Sierra Leone-Bumbuna": "https://drive.google.com/uc?export=download&id=1WeJLspjEoQi8lOThfk_WDgMjNlRm9m_j",
+        "Togo-Dapaong_QC": "https://drive.google.com/uc?export=download&id=11du5qHBELTV1is2jIJbBk13qcTSuT-nj"
     }
-    print(file_paths)  # Print file paths for debugging
 
     # Select a region to analyze
     selected_region = st.selectbox("Select Region", list(file_paths.keys()))
 
+    # Download the file from Google Drive
+    output = f"{selected_region}.csv"
+    gdown.download(file_paths[selected_region], output, quiet=False)
+
     # Load and preprocess the selected dataset
-    data = load_dataset(file_paths[selected_region])
+    data = load_dataset(output)
 
     # Check if 'Timestamp' column exists in the dataset
     if data is not None and "Timestamp" in data.columns:
-        # Exclude 'Timestamp', 'Comments', and 'ModA' columns from the dropdown options
-        excluded_columns = ["Timestamp", "Comments"]
-        selectable_columns = [col for col in data.columns if col not in excluded_columns]
+        # Remove 'Comments' column if it exists
+        if 'Comments' in data.columns:
+            data = data.drop(columns=['Comments'])
 
+        # Exclude 'Timestamp' from the dropdown options
+        selectable_columns = [col for col in data.columns if col != "Timestamp"]
+        
         # Handle missing values
         data = handle_missing_values(data)
 
@@ -69,7 +72,9 @@ def analyze_solar_irradiance_patterns():
 
         # Perform time series analysis for the selected solar irradiance column
         st.subheader(f"Time Series Analysis for {selected_column}")
-        time_series_analysis(data, "Timestamp", selected_column)
+
+        # Convert the 'Timestamp' column to datetime objects (using the correct format)
+        data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%Y-%m-%d %H:%M:%S') 
 
         # Display correlation matrix
         st.subheader("Correlation Matrix")
@@ -92,22 +97,8 @@ def analyze_solar_irradiance_patterns():
     else:
         st.error("Timestamp column not found in the dataset.")
 
-# Time Series Analysis Function
-def time_series_analysis(data, time_column, column1):
-    data[time_column] = pd.to_datetime(data[time_column])
-    data.set_index(time_column, inplace=True)
-
-    fig, ax = plt.subplots()
-    ax.plot(data.index, data[column1])
-    ax.set_xlabel(time_column)
-    ax.set_ylabel(column1)
-
-    st.pyplot(fig)
-
-# Main function to run the app
 def main():
     analyze_solar_irradiance_patterns()
 
-# Run the app
 if __name__ == "__main__":
     main()

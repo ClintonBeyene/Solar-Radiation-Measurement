@@ -1,15 +1,8 @@
 import streamlit as st
 import pandas as pd
-import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-import sys
-
-# Ensure the correct path for module imports
-os.getcwd()
-os.path.abspath("../")
-sys.path.insert(0, os.path.abspath("./"))
-from scripts.fetch_data import DataFolderProcessor
+import gdown
 
 # Correlation Analysis Class
 class CorrelationAnalysis:
@@ -27,22 +20,16 @@ class CorrelationAnalysis:
 
         st.pyplot(fig)
 
-# Example usage
-processor = DataFolderProcessor()
-csv_files = processor.csv_files
 
 def correlation_analysis():
     st.title("Correlation Analysis")
 
     # Specify file paths for the three regions directly
     file_paths = {
-        "Benin-Malanville": os.path.join(processor.data_folder_path, "cleaned_cleaned_benin-malanville.csv"),
-        "Sierra Leone-Bumbuna": os.path.join(processor.data_folder_path, "cleaned_cleaned_sierraleone-bumbuna.csv"),
-        "Togo-Dapaong_QC": os.path.join(processor.data_folder_path, "cleaned_cleaned_togo-dapaong_qc.csv")
+        "Benin-Malanville": "https://drive.google.com/uc?export=download&id=17iGCuwUFAVBt1imW6btaBQ1LiFgavX7U",
+        "Sierra Leone-Bumbuna": "https://drive.google.com/uc?export=download&id=1WeJLspjEoQi8lOThfk_WDgMjNlRm9m_j",
+        "Togo-Dapaong_QC": "https://drive.google.com/uc?export=download&id=11du5qHBELTV1is2jIJbBk13qcTSuT-nj"
     }
-
-    # Print the data folder path for debugging
-    print("Data folder path:", processor.data_folder_path)
 
     # Create columns for each region's analysis horizontally
     col1, col2, col3 = st.columns(3)
@@ -51,19 +38,27 @@ def correlation_analysis():
         with col1 if idx % 3 == 1 else col2 if idx % 3 == 2 else col3:
             st.subheader(region)
             try:
-                # Print the file path for debugging
-                print(f"Loading data from: {file_path}")
-                data = pd.read_csv(file_path)
+                # Download the file from Google Drive
+                output = f"{region}.csv"
+                gdown.download(file_path, output, quiet=False)
+
+                # Load the data
+                data = pd.read_csv(output)
+
+                # Remove the 'Comments' column if it exists
+                if 'Comments' in data.columns:
+                    data = data.drop(columns=['Comments'])
 
                 if "Timestamp" in data.columns:
-                    # Drop the Timestamp column for correlation analysis
-                    data = data.drop(columns=["Timestamp"])
+                    # Convert the 'Timestamp' column to datetime objects (using the correct format)
+                    data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%Y-%m-%d %H:%M:%S')
 
                     # Initialize CorrelationAnalysis class
                     corr_analysis = CorrelationAnalysis(data)
 
                     # Perform correlation analysis
                     corr_analysis.analyze()
+
                 else:
                     st.write(f"Timestamp column not found in the dataset for {region}.")
             except FileNotFoundError:
