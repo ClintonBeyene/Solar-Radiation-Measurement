@@ -1,0 +1,356 @@
+[33mcommit bfb2e4554f64b84e25e284d6283571dd0f68bdf0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdashboard-dev[m[33m)[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 15:07:24 2024 +0300
+
+    add a large csv file to deploy
+
+[33mcommit 45627c8fb4e9dc1d2114d3a1a8b7bf8bdae5f3f1[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 14:35:45 2024 +0300
+
+    Track CSV files in app/data/csv with Git LFS
+
+[33mcommit bc8fe5bb399d4304ff7098a9bfa10ec72109b23a[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 14:10:08 2024 +0300
+
+    Track large CSV files with Git LFS
+
+[33mcommit c575d70d407941484cc1ce0fbdbdfbf1f91f7d6a[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 13:59:09 2024 +0300
+
+    git ignore
+
+[33mcommit bf81195a9ec1660b984082af073db9a549c98b37[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 11:39:41 2024 +0300
+
+    data
+
+[33mcommit 091165e7ef0d6edf2d53164ebd4d7bac384f485c[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 11:27:11 2024 +0300
+
+    editing gitignore because the file of my data is not accessible when i deploy app
+
+[33mcommit 3f73c8a4fb4f087905eef0be27f8378d81016c14[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mmain/main[m[33m, [m[1;32mmain[m[33m)[m
+Merge: ab8404e 9313ba5
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 12:38:10 2024 +0300
+
+    Merge branch 'main' of https://github.com/ClintonBeyene/Solar-Radiation-Measurement
+
+[33mcommit ab8404e76e4aacfad40cc537d7d8d7a1e74d2a75[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 12:35:42 2024 +0300
+
+    editing
+
+[33mcommit 9313ba5e0af26c0c58a60bae9f5e3d397a50b696[m
+Merge: 6db8791 8eb7702
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:33:19 2024 +0300
+
+    Merge pull request #12 from ClintonBeyene/dashboard-dev
+    
+    Delete .gitignore
+
+[33mcommit 8eb77023e6a6f1a8c3f68a377d9ce72df8bbf4bc[m[33m ([m[1;31morigin/dashboard-dev[m[33m, [m[1;31mmain/dashboard-dev[m[33m)[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:32:32 2024 +0300
+
+    Delete .gitignore
+    
+    editing
+
+[33mcommit 6db87911ed4134f84da6875eb0b71a4e9d3bc468[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:31:52 2024 +0300
+
+    Delete .gitignore
+    
+    accept
+
+[33mcommit 1d652578d4b40f680f437ed337a1034abf18840c[m
+Merge: c75b496 b2cff85
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:26:24 2024 +0300
+
+    Merge pull request #11 from ClintonBeyene/dashboard-dev
+    
+    Update .gitignore
+
+[33mcommit b2cff8590e4254d0678f1b29e8f0e74a505feca3[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:25:39 2024 +0300
+
+    Update .gitignore
+    
+    deploy issue editing
+
+[33mcommit c75b49655c4d6a27bb18bb3f7be73fb5fdf0e04c[m
+Merge: 93c3aa5 971bbbf
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:21:55 2024 +0300
+
+    Merge pull request #10 from ClintonBeyene/dashboard-dev
+    
+    Update .gitignore
+
+[33mcommit 971bbbfffddd8f704327f84d333e5cf887033e9e[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 12:21:24 2024 +0300
+
+    Update .gitignore
+    
+    to solve deploy isuue
+
+[33mcommit 93c3aa5071d2c1956d5cc5b38e5f0aa5433f106c[m
+Merge: fddcc8b 07b571e
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 11:49:38 2024 +0300
+
+    Merge pull request #9 from ClintonBeyene/ClintonBeyene-patch-2
+    
+    Update .gitignore
+
+[33mcommit 07b571ecd8a2de03257a4768e0e4a48fd06c6955[m[33m ([m[1;31morigin/ClintonBeyene-patch-2[m[33m, [m[1;31mmain/ClintonBeyene-patch-2[m[33m)[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 11:49:16 2024 +0300
+
+    Update .gitignore
+    
+    editing for the deployment issues solveing
+
+[33mcommit fddcc8b809a3e43ca328fdb3dec08d523712a8fa[m
+Merge: 318c6fd a7811b1
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 11:44:56 2024 +0300
+
+    Merge pull request #8 from ClintonBeyene/ClintonBeyene-patch-1
+    
+    Update .gitignore
+
+[33mcommit a7811b1f68f69bba779ccfc82c911d6fec700dce[m[33m ([m[1;31morigin/ClintonBeyene-patch-1[m[33m, [m[1;31mmain/ClintonBeyene-patch-1[m[33m)[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 11:44:38 2024 +0300
+
+    Update .gitignore
+    
+    streamlit app in the deploy is not able to access data files
+
+[33mcommit 318c6fd703747f23b7d994bc5764758e66d4f9a0[m
+Merge: 4db0eeb 8e1f008
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Sat Aug 24 11:18:24 2024 +0300
+
+    Merge pull request #7 from ClintonBeyene/dashboard-dev
+    
+    directory issue
+
+[33mcommit 8e1f0086187861753079cbd69c616d664c1818b4[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Sat Aug 24 11:16:54 2024 +0300
+
+    directory issue
+
+[33mcommit 4db0eeb86c3ebd994902903edb72d36774ded1cd[m
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 23:17:31 2024 +0300
+
+    Added Dev Container Folder
+
+[33mcommit 77dc5375dec3850111ce895e752e322025a04c33[m
+Merge: 0ecf602 e9effe8
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 23:15:53 2024 +0300
+
+    Merge pull request #6 from ClintonBeyene/dashboard-dev
+    
+    app/data
+
+[33mcommit e9effe8ff7304dd1524a6096fc369e0e1f46ac8e[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 23:14:43 2024 +0300
+
+    app/data
+
+[33mcommit 0ecf60291d2867376d4332cc8de2a3101e62a1bd[m
+Merge: d19adbc 67c7a30
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 23:03:39 2024 +0300
+
+    Merge pull request #5 from ClintonBeyene/dashboard-dev
+    
+    exclude sys
+
+[33mcommit 67c7a30af57132d206563563c3e257941d644034[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 23:02:10 2024 +0300
+
+    exclude sys
+
+[33mcommit d19adbc2e0fbaa8c7ae3cd96faf03f9695b956c8[m
+Merge: fa45c2e 46758cd
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 22:57:12 2024 +0300
+
+    Merge pull request #4 from ClintonBeyene/dashboard-dev
+    
+    deploy error solving
+
+[33mcommit 46758cddb20044789497ea8e32bb8a19fa84b058[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 22:53:06 2024 +0300
+
+    deploy error solving
+
+[33mcommit fa45c2e6a31add18efa8b9e8590082969441bdc3[m
+Merge: 295e69d fea895a
+Author: Clinton Beyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 22:49:50 2024 +0300
+
+    Merge pull request #3 from ClintonBeyene/dashboard-dev
+    
+    Dashboard dev
+
+[33mcommit fea895a11a077f2621546b8eea4d69e036cc7787[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 22:42:24 2024 +0300
+
+    solving deploy error
+
+[33mcommit 2b3e85fc0943be32fd2c458ed739ad0f62c8adfc[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 22:21:51 2024 +0300
+
+    solving delpoy issues
+
+[33mcommit 295e69d41abf53739963f56ffa0faab165b144a2[m
+Merge: 2af9a37 783478e
+Author: ClintonBeyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 22:05:11 2024 +0300
+
+    Merge pull request #2 from ClintonBeyene/dashboard-dev
+    
+    notebboks with analysis, scrips that stored function and overall EDA …
+
+[33mcommit 783478e715c7313b322000fa56968738431bc02a[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 21:46:47 2024 +0300
+
+    notebboks with analysis, scrips that stored function and overall EDA files
+
+[33mcommit 2af9a37dda50c96ab2c2985ddc6756164d2f0bce[m
+Merge: 1057a3d 91fc8d6
+Author: ClintonBeyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 21:14:17 2024 +0300
+
+    Merge pull request #1 from ClintonBeyene/dashboard-dev
+    
+    Dashboard dev
+
+[33mcommit 91fc8d64f8bbc0cb5c05d3474339968aa7fff03d[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 21:02:56 2024 +0300
+
+    EDA
+
+[33mcommit 64429eca869cbc32131fc7f169bde558d0f195db[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 21:01:03 2024 +0300
+
+    to create analyzing data by cleaning cleaned data
+
+[33mcommit 25bb433ec72fb71bb4af9f0689a8ef6bb5b429a2[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 20:57:25 2024 +0300
+
+    correlation analysis
+
+[33mcommit 694084c9d85ad4e3505fcc5004b1d5602c66114c[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 20:56:23 2024 +0300
+
+    analyse solar radiance
+
+[33mcommit a96f9fe69dab006349b91c78bde5ff512747ba9c[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 20:55:11 2024 +0300
+
+    this file run time series data analysis
+
+[33mcommit 5538971a58dfc2904abc5669193b0e57c9ebe21f[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 20:54:07 2024 +0300
+
+    main .py file to run streamline app
+
+[33mcommit 6b7db19a6bb4ee8818072d01ca2dfb816fc00e10[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 04:22:25 2024 +0300
+
+    Temperature Analysis: Examine how relative humidity (RH) influences temperature readings and solar radiation.
+
+[33mcommit 820417c987e8ebdcedfa25e391ab1a1543b746e0[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 04:21:40 2024 +0300
+
+    Wind Analysis: Use polar plots to identify trends and significant wind events by showing the distribution of wind speed and direction, along with the variability of wind direction.
+
+[33mcommit 5594676191337a5f9ed65dd2d6658f4a96290bed[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 04:19:52 2024 +0300
+
+    Correlation Analysis: Use heatmaps or pair plots to visualize the correlations between solar radiation components (GHI, DNI, DHI) and temperature measures (TModA, TModB). Investigate the relationship between wind conditions (WS, WSgust, WD) and solar irradiance using scatter matrices.
+
+[33mcommit 629dd35e762cff07ca369c53a3c947745fc7b811[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 04:18:37 2024 +0300
+
+    Time Series Analysis: Plot line graphs or area plots of GHI, DNI, DHI, and Tamb over time to observe patterns by month, trends throughout the day, or anomalies such as peaks in solar irradiance or temperature fluctuations. Evaluate the impact of cleaning (using the 'Cleaning' column) on the sensor readings (ModA, ModB) over time.
+
+[33mcommit 602c249b546a0b5341186504d7828b73cc9c71f2[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 01:11:53 2024 +0300
+
+    manipulating the whole dataset by adding new .ipynb file
+
+[33mcommit 8e5ad53a130dbf9e897890393e33edd38d33b447[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 01:09:09 2024 +0300
+
+    all this files are modified and changed to new file
+
+[33mcommit 1057a3d0d9bf861163ae3653b3cfe7b90621f276[m
+Author: ClintonBeyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Fri Aug 23 01:08:10 2024 +0300
+
+    Delete notebooks/benin-malanville.ipynb
+    
+    this notebook is no longer essential
+
+[33mcommit bb523cc97e5db562cd90eb7e63bc7cb7df24904e[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 01:06:09 2024 +0300
+
+    Adding new file .ipynb file that check all csv data quality
+
+[33mcommit 717baada0ff6a05797da44c45b90af86139e8613[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Fri Aug 23 00:59:58 2024 +0300
+
+    Add new Jupyter Notebook
+
+[33mcommit 137f1ba35b48d5874580b613c1bb2d7d6b55077a[m
+Author: Clinton Beyene <clintonbeyene52@gmail.com>
+Date:   Thu Aug 22 16:33:06 2024 +0300
+
+    Created intial folder to work that are easy to navigate
+
+[33mcommit 19a4fac308b7f3ac7428b5ce00df934a23d072a4[m
+Author: ClintonBeyene <79169975+ClintonBeyene@users.noreply.github.com>
+Date:   Thu Aug 22 01:32:12 2024 +0300
+
+    Initial commit
