@@ -5,11 +5,13 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import numpy as np
 import seaborn as sns
+import gdown
 import sys
+
+# Ensure the current working directory is correct
 os.getcwd()
 os.path.abspath("../")
 sys.path.insert(0, os.path.abspath("./"))
-from scripts.fetch_data import DataFolderProcessor
 
 # Time Series Analysis Class
 class TimeSeriesAnalysis:
@@ -27,22 +29,15 @@ class TimeSeriesAnalysis:
 
         st.pyplot(fig)
 
-# Example usage
-processor = DataFolderProcessor()
-csv_files = processor.csv_files
-
 def time_series_analysis():
     st.title("Time Series Analysis")
 
-    # Specify file paths for the three regions directly
+    # Specify file paths for the three regions directly (Google Drive links)
     file_paths = {
-        "Benin-Malanville": os.path.join(processor.data_folder_path, "cleaned_cleaned_benin-malanville.csv"),
-        "Sierra Leone-Bumbuna": os.path.join(processor.data_folder_path, "cleaned_cleaned_sierraleone-bumbuna.csv"),
-        "Togo-Dapaong_QC": os.path.join(processor.data_folder_path, "cleaned_cleaned_togo-dapaong_qc.csv")
+        "Benin-Malanville": "https://drive.google.com/uc?export=download&id=17iGCuwUFAVBt1imW6btaBQ1LiFgavX7U",
+        "Sierra Leone-Bumbuna": "https://drive.google.com/uc?export=download&id=1WeJLspjEoQi8lOThfk_WDgMjNlRm9m_j",
+        "Togo-Dapaong_QC": "https://drive.google.com/uc?export=download&id=11du5qHBELTV1is2jIJbBk13qcTSuT-nj"
     }
-
-    # Print the data folder path for debugging
-    print("Data folder path:", processor.data_folder_path)
 
     # Create columns for each region's analysis horizontally
     col1, col2, col3 = st.columns(3)
@@ -51,9 +46,16 @@ def time_series_analysis():
         with col1 if idx % 3 == 1 else col2 if idx % 3 == 2 else col3:
             st.subheader(region)
             try:
-                # Print the file path for debugging
-                print(f"Loading data from: {file_path}")
-                data = pd.read_csv(file_path)
+                # Download the file from Google Drive
+                output = f"{region}.csv"
+                gdown.download(file_path, output, quiet=False)
+
+                # Load the data
+                data = pd.read_csv(output, parse_dates=['Timestamp'])
+
+                # Remove the 'Comments' column if it exists
+                if 'Comments' in data.columns:
+                    data = data.drop(columns=['Comments'])
 
                 if "Timestamp" in data.columns:
                     # Initialize TimeSeriesAnalysis class
@@ -72,7 +74,6 @@ def time_series_analysis():
                     st.write(f"Timestamp column not found in the dataset for {region}.")
             except FileNotFoundError:
                 st.write(f"File not found at path: {file_path}")
-
 
 def main():
     time_series_analysis()
