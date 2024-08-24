@@ -42,6 +42,7 @@ def analyze_solar_irradiance_patterns():
         "Sierra Leone-Bumbuna": os.path.join(processor.data_folder_path, "cleaned_cleaned_sierraleone-bumbuna.csv"),
         "Togo-Dapaong_QC": os.path.join(processor.data_folder_path, "cleaned_cleaned_togo-dapaong_qc.csv")
     }
+    print(file_paths)  # Print file paths for debugging
 
     # Select a region to analyze
     selected_region = st.selectbox("Select Region", list(file_paths.keys()))
@@ -50,7 +51,7 @@ def analyze_solar_irradiance_patterns():
     data = load_dataset(file_paths[selected_region])
 
     # Check if 'Timestamp' column exists in the dataset
-    if "Timestamp" in data.columns:
+    if data is not None and "Timestamp" in data.columns:
         # Exclude 'Timestamp', 'Comments', and 'ModA' columns from the dropdown options
         excluded_columns = ["Timestamp", "Comments"]
         selectable_columns = [col for col in data.columns if col not in excluded_columns]
